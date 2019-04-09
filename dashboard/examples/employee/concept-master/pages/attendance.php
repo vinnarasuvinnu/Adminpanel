@@ -94,14 +94,14 @@ $res=mysqli_query($conn,$sql);
 
 while ($row=mysqli_fetch_array($res)){
 $eid=$row['employee_id'];
-$q2="select * from employee where eid='$eid'";
+$q2="select * from login where id='$eid'";
 $res1=mysqli_query($conn,$q2);
 $row1=mysqli_fetch_array($res1);
 ?>
 <tr>
     <td><?php echo $row['date']; ?></td>
         <td><?php echo $row['employee_id']; ?></td>
-    <td><?php echo $row1['emp_fname']; ?></td>
+    <td><?php echo $row1['name']; ?></td>
 
     <td><?php echo $row['time_in']; ?></td>
     <td><?php echo $row['time_out']; ?></td>
